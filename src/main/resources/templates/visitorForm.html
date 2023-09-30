@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns: xmlns:th="http://www.w3.org/1999/xhtml" th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> KPL Visitor Registration</title>
+</head>
+<body>
+<h1> Visitor Registration</h1>
+<form th:action="@{/visitors/saveVisitors}" method="post" th:object="${visitor}">
+    <label for="nid">NID: </label>
+    <input  type="text" id="nid" name="NID" th:field="*{NID} required">
+
+    <label for="firstName">NID: </label>
+    <input  type="text" id="firstName" name="firstName" th:field="*{firstName} required">
+
+    <label for="lastName">NID: </label>
+    <input  type="text" id="lastName" name="lastName" th:field="*{lastName}">
+
+    <label for="gender">NID: </label>
+    <input  type="text" id="gender" name="gender" th:field="*{gender}">
+
+    <label for="dateOfBirth">NID: </label>
+    <input  type="text" id="dateOfBirth" name="dateOfBirth" th:field="*{DateOfBirth} required">
+
+    <label for="Tel">NID: </label>
+    <input  type="text" id="Tel" name="Tel" th:field="*{Tel} required">
+
+    <label for="email">NID: </label>
+    <input  type="text" id="email" name="email" th:field="*{email}">
+
+    <label for="reason">NID: </label>
+    <input  type="text" id="reason" name="reason" th:field="*{reason}">
+    <!-- Add other form fields for firstName, lastName, gender, dateOfBirth, etc. -->
+
+    <button type="Submit">Register</button>
+</form>
+</body>
+</html>

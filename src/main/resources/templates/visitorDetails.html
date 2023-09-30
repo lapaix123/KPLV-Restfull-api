@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Visitor Details</title>
+</head>
+<body>
+<h1>Visitor Details</h1>
+<p>NID: <span th:text="${visitor.NID}"></span></p>
+<p>First Name: <span th:text="${visitor.firstName}"></span></p>
+<p>Last Name: <span th:text="${visitor.lastName}"></span></p>
+<p>Gender: <span th:text="${visitor.gender}"></span></p>
+<p>Date of Birth: <span th:text="${visitor.dateOfBirth}"></span></p>
+<p>Telephone: <span th:text="${visitor.Tel}"></span></p>
+<p>Email: <span th:text="${visitor.email}"></span></p>
+<p>category: <span th:text="${visitor.category}"></span></p>
+<p>Reason: <span th:text="${visitor.reason}"></span></p>
+<p>EnteredTime: <span th:text="${visitor.enteredTime}"></span></p>
+<p>checkoutCode: <span th:text="${visitor.checkoutCode}"></span></p>
+<p>checkoutTime: <span th:text="${visitor.checkoutCode}"></span></p>
+
+<!-- Add other details of the visitor -->
+</body>
+</html>

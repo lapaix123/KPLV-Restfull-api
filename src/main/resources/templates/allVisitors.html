@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  <title>All Visitors</title>
+
+</head>
+
+<body>
+
+<div>
+  <h1>All Visitors</h1>
+  <hr>
+  <!-- Add a button -->
+  <a th: href="@{/visitors/allVisitors}"
+     class="btn btn-primary btn-sm mb-3">
+    Add Visitor</a>
+
+
+  <table class="table table-bordered table-striped" >
+    <thead class="table-dark">
+
+    <tr>
+      <th>NID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Gender</th>
+      <th>Date of birth</th>
+      <th>Tel</th>
+      <th>Email</th>
+      <th>Reason</th>
+
+      <!-- Add other table headers for other visitor attributes -->
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="visitor : ${VisitorList}">
+
+      <td th:text="${visitor.NID}"></td>
+      <td th:text="${visitor.firstName}"></td>
+      <td th:text="${visitor.lastName}"></td>
+      <td th:text="${visitor.gender}"></td>
+      <td th:text="${visitor.dateOfBirth}"></td>
+      <td th:text="${visitor.Tel}"></td>
+      <td th:text="${visitor.email}"></td>
+      <td th:text="${visitor.reason}"></td>
+
+      <!-- Add other table cells for other visitor attributes -->
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

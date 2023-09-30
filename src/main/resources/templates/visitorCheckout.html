@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Visitor Checkout</title>
+</head>
+<body>
+<h1>Visitor Checkout</h1>
+<p>NID: <span th:text="${visitor.NID}"></span></p>
+<p>First Name: <span th:text="${visitor.firstName}"></span></p>
+<p>Last Name: <span th:text="${visitor.lastName}"></span></p>
+<p>Checkout Code: <span th:text="${visitor.checkoutCode}"></span></p>
+
+<!-- Add other details of the visitor and the checkout form -->
+<form th:action="@{/visitors/checkout}" method="post">
+  <input type="hidden" name="visitorId" th:value="${visitor.NID}">
+  <input type="hidden" name="visitorCheckOutCode " th:value="${visitor.checkoutCode}">
+  <button type="submit">Checkout</button>
+</form>
+</body>
+</html>
